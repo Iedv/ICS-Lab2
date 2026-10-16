@@ -1,0 +1,50 @@
+Dump of assembler code for function phase_00:
+   0x0000000000401480 <+0>:	endbr64
+   0x0000000000401484 <+4>:	push   %rbp
+   0x0000000000401485 <+5>:	mov    %rsp,%rbp
+   0x0000000000401488 <+8>:	push   %r14
+   0x000000000040148a <+10>:	push   %rbx
+   0x000000000040148b <+11>:	mov    %rdi,%rbx
+   0x000000000040148e <+14>:	sub    $0x10,%rsp
+   0x0000000000401492 <+18>:	mov    %fs:0x28,%r14
+   0x000000000040149b <+27>:	mov    %r14,-0x18(%rbp)
+   0x000000000040149f <+31>:	mov    %rsi,%r14
+   0x00000000004014a2 <+34>:	mov    $0x2,%esi
+   0x00000000004014a7 <+39>:	call   0x401540 <valid_u32_fields>
+   0x00000000004014ac <+44>:	test   %al,%al
+   0x00000000004014ae <+46>:	jne    0x4014d0 <phase_00+80>
+   0x00000000004014b0 <+48>:	xor    %eax,%eax
+   0x00000000004014b2 <+50>:	mov    -0x18(%rbp),%rdx
+   0x00000000004014b6 <+54>:	sub    %fs:0x28,%rdx
+   0x00000000004014bf <+63>:	jne    0x40150c <phase_00+140>
+   0x00000000004014c1 <+65>:	add    $0x10,%rsp
+   0x00000000004014c5 <+69>:	pop    %rbx
+   0x00000000004014c6 <+70>:	pop    %r14
+   0x00000000004014c8 <+72>:	pop    %rbp
+   0x00000000004014c9 <+73>:	ret
+   0x00000000004014ca <+74>:	nopw   0x0(%rax,%rax,1)
+   0x00000000004014d0 <+80>:	xor    %eax,%eax
+   0x00000000004014d2 <+82>:	lea    -0x20(%rbp),%rdx
+   0x00000000004014d6 <+86>:	lea    -0x1c(%rbp),%rcx
+   0x00000000004014da <+90>:	mov    $0x402041,%esi
+   0x00000000004014df <+95>:	mov    %rbx,%rdi
+   0x00000000004014e2 <+98>:	call   0x401150 <__isoc99_sscanf@plt>
+   0x00000000004014e7 <+103>:	cmp    $0x2,%eax
+   0x00000000004014ea <+106>:	jne    0x4014b0 <phase_00+48>
+   0x00000000004014ec <+108>:	mov    %r14,%rdi
+   0x00000000004014ef <+111>:	shr    $0x5,%rdi
+   0x00000000004014f3 <+115>:	movzbl %dil,%edi
+   0x00000000004014f7 <+119>:	xor    $0x2a,%edi
+   0x00000000004014fa <+122>:	cmp    %edi,-0x20(%rbp)
+   0x00000000004014fd <+125>:	jne    0x4014b0 <phase_00+48>
+   0x00000000004014ff <+127>:	call   0x401470 <tutorial_mix>
+   0x0000000000401504 <+132>:	cmp    %eax,-0x1c(%rbp)
+   0x0000000000401507 <+135>:	sete   %al
+   0x000000000040150a <+138>:	jmp    0x4014b2 <phase_00+50>
+   0x000000000040150c <+140>:	call   0x401120 <__stack_chk_fail@plt>
+End of assembler dump.
+Dump of assembler code for function tutorial_mix:
+   0x0000000000401470 <+0>:	endbr64
+   0x0000000000401474 <+4>:	lea    0x7(%rdi,%rdi,2),%eax
+   0x0000000000401478 <+8>:	ret
+End of assembler dump.
